@@ -1,12 +1,6 @@
-# Portafolio de Criptografía — Said Hoffman
+# Portafolio de Criptografía 
 
-Este repositorio contiene una selección curada de prácticas y proyectos académicos sobre criptografía realizados durante el curso. Está preparado para mostrarse como evidencia técnica en un perfil profesional de ciberseguridad.
-
-## Qué encontrarás aquí
-
-- Implementaciones prácticas de algoritmos clásicos y modernos (AES, RSA, ECDH/ECDSA).
-- Ejercicios y utilidades en Python y Java con documentación y reportes (PDF/DOCX).
-- Código organizado por práctica y con ejemplos ejecutables cuando es posible.
+Este repositorio contiene una selección de prácticas y proyectos académicos sobre criptografía realizados durante los cursos. 
 
 ## Estructura resumida
 
