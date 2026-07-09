@@ -47,3 +47,20 @@ Si quieres, el siguiente paso puede ser:
 1. crear el repositorio en GitHub,
 2. subir estos archivos con commits bien organizados,
 3. añadir una portada más profesional y un apartado de habilidades técnicas.
+
+## Material adicional importado desde `Practicas/`
+
+He añadido una copia saneada de la carpeta original `Practicas/` dentro de:
+
+- `01-Practicas/PracticasCurso/`
+
+Contenido incluido (selección relevante):
+- Códigos de las prácticas (`*.py`) organizados por práctica.
+- Documentos y reportes (`*.pdf`, `*.docx`) con la explicación de cada ejercicio.
+- Archivos públicos de ejemplo (p. ej. llaves públicas en `*.txt`).
+
+Qué se excluyó o limpió antes de copiar:
+- Archivos de llave privada y secretos (`*.pem`, `*private*`, `secretocompartido.key`, `derivacionclave.key`, etc.) fueron eliminados para evitar subir material sensible.
+- Archivos binarios muy grandes (>100 MB) fueron eliminados para mantener el repositorio GitHub-friendly.
+
+Si quieres que incluya o excluya algo más específico dentro de `Practicas/`, dime exactamente qué carpetas o tipos de archivos deseas mantener y lo ajusto.
