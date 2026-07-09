@@ -1,52 +1,72 @@
-# Portafolio de Criptografía
+# Portafolio de Criptografía — Said Hoffman
 
-Este repositorio reúne de forma organizada las prácticas más representativas de criptografía que he trabajado, enfocadas en cifrado clásico, simétrico, asimétrico, intercambio de claves y conceptos matemáticos aplicados.
+Este repositorio contiene una selección curada de prácticas y proyectos académicos sobre criptografía realizados durante el curso. Está preparado para mostrarse como evidencia técnica en un perfil profesional de ciberseguridad.
 
-## Objetivo
+## Qué encontrarás aquí
 
-Mostrar de forma clara y profesional las prácticas realizadas para destacar habilidades en:
-- Criptografía básica y cifrado clásico
-- AES y modos de operación
-- RSA y criptografía asimétrica
-- Diffie-Hellman y intercambio de claves
-- Matemáticas aplicadas a criptografía
+- Implementaciones prácticas de algoritmos clásicos y modernos (AES, RSA, ECDH/ECDSA).
+- Ejercicios y utilidades en Python y Java con documentación y reportes (PDF/DOCX).
+- Código organizado por práctica y con ejemplos ejecutables cuando es posible.
 
-## Estructura del repositorio
+## Estructura resumida
 
-- 01-Cifrado-Clasico: implementación de cifrado monoalfabético con interfaz gráfica en Java.
-- 02-Cifrado-Simetrico: prácticas con AES y modos de operación utilizando Python y PyQt.
-- 03-Cifrado-Asimetrico: implementación de RSA para cifrado, descifrado y firma.
-- 04-Intercambio-de-Claves: ejercicios de Diffie-Hellman y DIHE.
-- 05-Matematicas-y-Utilidades: herramientas auxiliares para operaciones matriciales modulares.
+- `01-Practicas`: Código y documentación de las prácticas agrupadas por tema.
+	- `PracticasCurso/`: copia saneada de la carpeta original `Practicas/` (ver nota de seguridad).
+- `02-Documentacion`: apuntes y materiales relevantes (resúmenes, guías).
+- `03-Recursos`: bibliografía y archivos auxiliares (no sensibles).
 
-## Requisitos
+## Requisitos (Python)
 
-Instala las dependencias con:
+Instala las dependencias necesarias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Archivos principales
+Las pruebas gráficas requieren `PyQt6` y `pycryptodome`; las utilidades matemáticas usan `numpy` y `sympy`.
 
-- [01-Cifrado-Clasico/Practica0.java](01-Cifrado-Clasico/Practica0.java)
-- [02-Cifrado-Simetrico/AES.py](02-Cifrado-Simetrico/AES.py)
-- [02-Cifrado-Simetrico/AESOperationModes.py](02-Cifrado-Simetrico/AESOperationModes.py)
-- [03-Cifrado-Asimetrico/practicaRSA.py](03-Cifrado-Asimetrico/practicaRSA.py)
-- [04-Intercambio-de-Claves/dihe.py](04-Intercambio-de-Claves/dihe.py)
-- [04-Intercambio-de-Claves/dh1.py](04-Intercambio-de-Claves/dh1.py)
-- [05-Matematicas-y-Utilidades/CalculadoraDeMatrices.py](05-Matematicas-y-Utilidades/CalculadoraDeMatrices.py)
+## Cómo usar (ejemplos rápidos)
 
-## Nota
+- Ejecutar la calculadora modular (interfaz PyQt):
 
-Este portafolio está pensado para mostrar trabajo académico y técnico de forma ordenada, limpia y preparada para publicarse en GitHub como evidencia de estudio en ciberseguridad.
+```bash
+python 05-Matematicas-y-Utilidades/CalculadoraDeMatrices.py
+```
 
-## Siguiente paso
+- Ejecutar ejemplo AES (línea de comandos / UI según el archivo):
 
-Si quieres, el siguiente paso puede ser:
-1. crear el repositorio en GitHub,
-2. subir estos archivos con commits bien organizados,
-3. añadir una portada más profesional y un apartado de habilidades técnicas.
+```bash
+python 02-Cifrado-Simetrico/AES.py
+```
+
+## Material importado desde `Practicas/`
+
+He añadido una copia saneada de la carpeta original `Practicas/` dentro de:
+
+- `01-Practicas/PracticasCurso/`
+
+Contenido incluido (selección relevante):
+- Códigos de las prácticas (`*.py`) organizados por práctica.
+- Documentos y reportes (`*.pdf`, `*.docx`) con la explicación de cada ejercicio.
+- Archivos públicos de ejemplo (por ejemplo, llaves públicas en `*.txt`).
+
+Qué se excluyó o limpió antes de copiar:
+- Archivos de llave privada y secretos (`*.pem`, `*private*`, `secretocompartido.key`, `derivacionclave.key`, etc.) fueron eliminados para evitar subir material sensible.
+- Archivos binarios muy grandes (>100 MB) fueron eliminados para mantener el repositorio GitHub-friendly.
+
+Si necesitas que incluya o excluya algo más específico dentro de `Practicas/`, dime exactamente qué carpetas o tipos de archivos deseas mantener y lo ajusto.
+
+## Nota de seguridad
+
+Antes de publicar, verifica que no queden credenciales o material sensible. Yo ya eliminé llaves privadas conocidas, pero la verificación final la haces tú.
+
+## Licencia y atribuciones
+
+El material es principalmente trabajo académico. Si quieres que añada una licencia explícita (por ejemplo MIT), dímelo y la incorporo.
+
+---
+
+Si todo está bien, procedo a subirlo al repositorio remoto que me indicaste.
 
 ## Material adicional importado desde `Practicas/`
 
