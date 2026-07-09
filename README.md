@@ -44,37 +44,8 @@ Contenido incluido (selección relevante):
 - Documentos y reportes (`*.pdf`, `*.docx`) con la explicación de cada ejercicio.
 - Archivos públicos de ejemplo (por ejemplo, llaves públicas en `*.txt`).
 
-Qué se excluyó o limpió antes de copiar:
-- Archivos de llave privada y secretos (`*.pem`, `*private*`, `secretocompartido.key`, `derivacionclave.key`, etc.) fueron eliminados para evitar subir material sensible.
-- Archivos binarios muy grandes (>100 MB) fueron eliminados para mantener el repositorio GitHub-friendly.
-
-Si necesitas que incluya o excluya algo más específico dentro de `Practicas/`, dime exactamente qué carpetas o tipos de archivos deseas mantener y lo ajusto.
-
-## Nota de seguridad
-
-Antes de publicar, verifica que no queden credenciales o material sensible. Yo ya eliminé llaves privadas conocidas, pero la verificación final la haces tú.
-
-## Licencia y atribuciones
-
-El material es principalmente trabajo académico. Si quieres que añada una licencia explícita (por ejemplo MIT), dímelo y la incorporo.
-
----
-
-Si todo está bien, procedo a subirlo al repositorio remoto que me indicaste.
-
-## Material adicional importado desde `Practicas/`
-
-He añadido una copia saneada de la carpeta original `Practicas/` dentro de:
-
-- `01-Practicas/PracticasCurso/`
 
 Contenido incluido (selección relevante):
 - Códigos de las prácticas (`*.py`) organizados por práctica.
 - Documentos y reportes (`*.pdf`, `*.docx`) con la explicación de cada ejercicio.
 - Archivos públicos de ejemplo (p. ej. llaves públicas en `*.txt`).
-
-Qué se excluyó o limpió antes de copiar:
-- Archivos de llave privada y secretos (`*.pem`, `*private*`, `secretocompartido.key`, `derivacionclave.key`, etc.) fueron eliminados para evitar subir material sensible.
-- Archivos binarios muy grandes (>100 MB) fueron eliminados para mantener el repositorio GitHub-friendly.
-
-Si quieres que incluya o excluya algo más específico dentro de `Practicas/`, dime exactamente qué carpetas o tipos de archivos deseas mantener y lo ajusto.
