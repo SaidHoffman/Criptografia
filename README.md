@@ -1,51 +1,139 @@
-# Portafolio de Criptografía 
+# Portafolio de Criptografía — Said Hoffman
 
-Este repositorio contiene una selección de prácticas y proyectos académicos sobre criptografía realizados durante los cursos. 
+Este repositorio contiene una selección curada de prácticas y proyectos académicos sobre criptografía. Está pensado para mostrarse en un perfil profesional y demostrar competencias técnicas y prácticas en criptografía aplicada.
 
-## Estructura resumida
+## Resumen
 
-- `01-Practicas`: Código y documentación de las prácticas agrupadas por tema.
-	- `PracticasCurso/`: copia saneada de la carpeta original `Practicas/` (ver nota de seguridad).
-- `02-Documentacion`: apuntes y materiales relevantes (resúmenes, guías).
-- `03-Recursos`: bibliografía y archivos auxiliares (no sensibles).
+- Código, reportes y utilidades en Python y Java.
+- Material organizado por práctica y por tema (simétrico, asimétrico, intercambio de claves, matemáticas).
+- Copia saneada de la carpeta original `Practicas/` en `01-Practicas/PracticasCurso/` (llaves privadas y archivos muy grandes eliminados).
 
-## Requisitos (Python)
+## Estructura principal
 
-Instala las dependencias necesarias:
+- `01-Practicas`
+  - `01-Cifrado-Clasico` — Cifrado monoalfabético (Java).
+  - `02-Cifrado-Simetrico` — AES y modos de operación (Python + PyQt UIs).
+  - `03-Cifrado-Asimetrico` — RSA y ejemplos de firma.
+  - `04-Intercambio-de-Claves` — DH clásico, DIHE, ejemplos ECDH.
+  - `05-Matematicas-y-Utilidades` — Calculadora modular y utilidades matemáticas.
+  - `PracticasCurso` — copia saneada de `Practicas/` con ejercicios y reportes.
+
+- `02-Documentacion` — apuntes y guías (resúmenes y referencias).
+- `03-Recursos` — bibliografía y archivos auxiliares.
+
+---
+
+## Temas cubiertos (detalle técnico)
+
+A continuación se listan los temas principales y dónde encontrar ejemplos y reportes.
+
+### Criptografía simétrica (AES)
+
+- Archivos de referencia:
+  - `02-Cifrado-Simetrico/AES.py`
+  - `02-Cifrado-Simetrico/AESOperationModes.py`
+- Modos implementados y analizados: ECB, CBC, CFB, OFB, CTR.
+- Puntos prácticos incluidos:
+  - Padding y unpadding para bloques de 128 bits.
+  - Preservación de cabeceras BMP cuando procede (para cifrar solo el payload de imagen).
+  - Uso de IV y nonce; diferencias entre modos y requisitos de longitud (16 bytes/8 bytes para CTR nonce).
+  - Derivación simple de clave desde texto de usuario (comentarios sobre por qué usar KDF en producción).
+
+### Criptografía asimétrica (RSA, ECDSA)
+
+- Archivos de referencia:
+  - `03-Cifrado-Asimetrico/practicaRSA.py`
+  - Ejercicios ECDSA en `01-Practicas/PracticasCurso/Practica02` y `01-Practicas/PracticasCurso/Practica05`.
+- Temas prácticos:
+  - Cifrado y descifrado con RSA + PKCS1_OAEP.
+  - Firmas con RSA y ECDSA, generación y verificación.
+  - Hashing con SHA-256 para firmas y comprobaciones.
+  - Discusión sobre tamaños de clave y recomendaciones.
+
+### Intercambio de claves (DH, ECDH, DIHE)
+
+- Archivos de referencia:
+  - `04-Intercambio-de-Claves/dh1.py`
+  - `04-Intercambio-de-Claves/dihe.py`
+  - `01-Practicas/PracticasCurso/practica06/ECDH.py`
+- Temas prácticos:
+  - DH modular clásico (generación de p y g, validación primalidad).
+  - ECDH: generar par de claves, exportar pública en Base64, acordar clave compartida.
+  - DIHE: ejercicios del curso sobre parámetros públicos y flujo de intercambio.
+
+### Criptografía clásica y fundamentos
+
+- Archivos de referencia:
+  - `01-Cifrado-Clasico/Practica0.java`
+  - Ejercicios teóricos en `01-Practicas/PracticasCurso/Practica02` (residuos cuadráticos, curvas toy).
+- Temas: cifrados monoalfabéticos, análisis básico, representaciones y transformaciones de texto.
+
+### Matemáticas y utilidades
+
+- `05-Matematicas-y-Utilidades/CalculadoraDeMatrices.py` — operaciones modulares y inversas de matrices.
+- Implementaciones de suma de puntos y doble en curvas elípticas en `Practicas/Practica02/SumaDoblado.py`.
+
+---
+
+## Tecnologías y librerías
+
+- Python 3.x (principal).
+- PyQt6 (UI para AES y calculadora) — `pip install PyQt6`.
+- PyCryptodome — `pip install pycryptodome`.
+- cryptography — para algunos ejemplos ECDH (opcional).
+- SymPy, NumPy — matemáticas (curvas, determinantes).
+
+Se incluye `requirements.txt` con las dependencias más relevantes.
+
+---
+
+## Cómo ejecutar (ejemplos rápidos)
+
+1) Crear entorno virtual e instalar dependencias:
 
 ```bash
+python -m venv venv
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # macOS / Linux
 pip install -r requirements.txt
 ```
 
-Las pruebas gráficas requieren `PyQt6` y `pycryptodome`; las utilidades matemáticas usan `numpy` y `sympy`.
-
-## Cómo usar (ejemplos rápidos)
-
-- Ejecutar la calculadora modular (interfaz PyQt):
-
-```bash
-python 05-Matematicas-y-Utilidades/CalculadoraDeMatrices.py
-```
-
-- Ejecutar ejemplo AES (línea de comandos / UI según el archivo):
+2) Ejecutar ejemplos GUI (si tienes entorno gráfico):
 
 ```bash
 python 02-Cifrado-Simetrico/AES.py
+python 05-Matematicas-y-Utilidades/CalculadoraDeMatrices.py
 ```
 
-## Material importado desde `Practicas/`
+3) Ejecutar ejemplos de consola:
 
-He añadido una copia saneada de la carpeta original `Practicas/` dentro de:
+```bash
+python 01-Practicas/PracticasCurso/practica06/ECDH.py
+python 03-Cifrado-Asimetrico/practicaRSA.py
+```
 
-- `01-Practicas/PracticasCurso/`
+---
 
-Contenido incluido (selección relevante):
-- Códigos de las prácticas (`*.py`) organizados por práctica.
-- Documentos y reportes (`*.pdf`, `*.docx`) con la explicación de cada ejercicio.
-- Archivos públicos de ejemplo (por ejemplo, llaves públicas en `*.txt`).
+## Buenas prácticas y notas de seguridad
 
+- No incluir llaves privadas ni credenciales en repositorios públicos. Antes de publicar verifiqué y eliminé llaves privadas (`*.pem`) y archivos secretos conocidos. Haz una revisión final si añades más archivos.
+- Para producción usa KDFs (HKDF/PBKDF2/Argon2) en lugar de MD5/SHAKE simples para derivación de claves.
+- Nunca reutilices IV/nonce en modos que requieren aleatoriedad única (CBC, CTR, GCM, etc.).
 
-Contenido incluido (selección relevante):
-- Códigos de las prácticas (`*.py`) organizados por práctica.
-- Documentos y reportes (`*.pdf`, `*.docx`) con la explicación de cada ejercicio.
-- Archivos públicos de ejemplo (p. ej. llaves públicas en `*.txt`).
+---
+
+## Sugerencias para presentar en entrevistas
+
+- Prepara 2–3 ejemplos ejecutables (por ejemplo AES UI y ECDH) y abre los `*.pdf` de los reportes para explicar el planteamiento.
+- Describe trade-offs: rendimiento vs seguridad, elección de curvas, tamaño de clave, y mitigaciones (padding, autenticación de datos).
+- Señala que el repositorio es material académico y que las decisiones de seguridad se discuten en los reportes y comentarios del código.
+
+---
+
+## Licencia
+
+Si deseas una licencia explícita (por ejemplo MIT), la añado y la incluyo en el repositorio.
+
+---
+
+Si quieres que genere un `README.md` por práctica con pasos de ejecución y archivos clave, lo creo automáticamente para las prácticas más relevantes. Dime cuáles quieres priorizar (recomiendo: `Practica02`, `Practica05`, `practica06`).
