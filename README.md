@@ -1,6 +1,6 @@
-# Portafolio de Criptografía — Said Hoffman
+# Portafolio de Criptografía 
 
-Este repositorio contiene una selección curada de prácticas y proyectos académicos sobre criptografía. Está pensado para mostrarse en un perfil profesional y demostrar competencias técnicas y prácticas en criptografía aplicada.
+Este repositorio contiene una selección de prácticas y proyectos académicos sobre criptografía.
 
 ## Resumen
 
