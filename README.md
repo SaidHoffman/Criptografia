@@ -111,29 +111,3 @@ python 05-Matematicas-y-Utilidades/CalculadoraDeMatrices.py
 python 01-Practicas/PracticasCurso/practica06/ECDH.py
 python 03-Cifrado-Asimetrico/practicaRSA.py
 ```
-
----
-
-## Buenas prácticas y notas de seguridad
-
-- No incluir llaves privadas ni credenciales en repositorios públicos. Antes de publicar verifiqué y eliminé llaves privadas (`*.pem`) y archivos secretos conocidos. Haz una revisión final si añades más archivos.
-- Para producción usa KDFs (HKDF/PBKDF2/Argon2) en lugar de MD5/SHAKE simples para derivación de claves.
-- Nunca reutilices IV/nonce en modos que requieren aleatoriedad única (CBC, CTR, GCM, etc.).
-
----
-
-## Sugerencias para presentar en entrevistas
-
-- Prepara 2–3 ejemplos ejecutables (por ejemplo AES UI y ECDH) y abre los `*.pdf` de los reportes para explicar el planteamiento.
-- Describe trade-offs: rendimiento vs seguridad, elección de curvas, tamaño de clave, y mitigaciones (padding, autenticación de datos).
-- Señala que el repositorio es material académico y que las decisiones de seguridad se discuten en los reportes y comentarios del código.
-
----
-
-## Licencia
-
-Si deseas una licencia explícita (por ejemplo MIT), la añado y la incluyo en el repositorio.
-
----
-
-Si quieres que genere un `README.md` por práctica con pasos de ejecución y archivos clave, lo creo automáticamente para las prácticas más relevantes. Dime cuáles quieres priorizar (recomiendo: `Practica02`, `Practica05`, `practica06`).
